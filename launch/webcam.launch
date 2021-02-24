@@ -28,7 +28,9 @@
 	    <arg name="width" value="0"/>
 	    <arg name="height" value="0"/>
 		-->
-	  	<!-- visualize on an image_view window the stream generated -->
+	   <!-- force scale, 1 means no forcing -->
+	   <arg name="scale" value="1"/>
+	   <!-- visualize on an image_view window the stream generated -->
 	  	<arg name="visualize" value="true" />
    </include>
 </launch>

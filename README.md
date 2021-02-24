@@ -34,6 +34,8 @@ Example usages in launch folder (**only the argument `video_stream_provider` is 
         <!-- force a width and height, 0 means no forcing -->
         <arg name="width" value="640"/>
         <arg name="height" value="480"/>
+        <!-- resize image by scale factor 0.5 half height, half width -->
+        <arg name="scale" value="1.0"/>
         <!-- visualize on an image_view window the stream generated -->
         <arg name="visualize" value="true" />
    </include>
@@ -85,6 +87,7 @@ If you want to publish all images (don't drop any and you don't mind some possib
  * `clockwise`: rotate image clockwise by 90 degrees once.
  * `loop_videofile`: if the provider is a video file, enable loop playback.
  * `width` and `height`: force a width and height to the capturing device (if it allows), 0 means no forcing.
+ * `scale`: resize image by scale factor, 0.5 will result in image with half the width and half the height of the original.
  * `start_frame`: if the provider is a video file, set the start frame of video.
  * `stop_frame`: if the provider is a video file, set the stop frame of video. `-1` means the end of the video. Also setting `stop_frame = start_frame + 1`  can publish a single frame with a certain rate.
 
