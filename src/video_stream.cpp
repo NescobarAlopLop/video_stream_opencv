@@ -202,6 +202,9 @@ virtual void do_publish(const ros::TimerEvent& event) {
           if (latest_config.clockwise){
           	cv::rotate(frame, frame, cv::ROTATE_90_CLOCKWISE);
           }
+          if (latest_config.scale != 1.0){
+			  cv::resize(frame, frame, cv::Size(), latest_config.scale, latest_config.scale);
+          }
         }
         cv_bridge::CvImagePtr cv_image =
           boost::make_shared<cv_bridge::CvImage>(header, "bgr8", frame);

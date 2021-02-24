@@ -13,6 +13,7 @@
   <arg name="loop_videofile" default="false" />
   <arg name="width" default="0"/>
   <arg name="height" default="0"/>
+  <arg name="scale" default="1"/>
 
   <group ns="$(arg camera_name)">
     <node pkg="video_stream_opencv" type="video_stream" name="$(arg camera_name)_stream"
@@ -31,6 +32,7 @@
       <param name="loop_videofile" type="bool" value="$(arg loop_videofile)" />
       <param name="width" type="int" value="$(arg width)" />
       <param name="height" type="int" value="$(arg height)" />
+      <param name="scale" type="double" value="$(arg scale)" />
     </node>
   </group>
 
